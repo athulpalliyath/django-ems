@@ -1,0 +1,411 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ABC Group</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'website/assets/img/favicon.ico'%}">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/bootstrap.min.css'%}">
+    <!-- Pe-icon-7-stroke CSS -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/pe-icon-7-stroke.css'%}">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/vendor/font-awesome.min.css'%}">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/plugins/slick.min.css'%}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/plugins/animate.css'%}">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/plugins/nice-select.css'%}">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/plugins/jqueryui.min.css'%}">
+    <!-- main style css -->
+    <link rel="stylesheet" href="{% static 'website/assets/css/style.css'%}">
+    <style>
+        @media only screen and (min-width: 1200px)
+        {
+.header-wide .container {
+    max-width: 1140px !important;
+}
+.team {
+	padding-bottom: 70px;
+	font-family: 'Poppins', sans-serif
+}
+
+.team .section-title {
+	text-align: left;
+	margin-bottom: 50px
+}
+
+.team__item {
+	height: 480px;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 30px;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover
+}
+
+.team__item:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(34, 48, 96, 0.8);
+	content: "";
+	z-index: -1;
+	opacity: 0;
+	-webkit-transition: all, 0.5s, ease-out, .5s;
+	-o-transition: all, 0.5s, ease-out, .5s;
+	transition: all, 0.5s, ease-out, .5s
+}
+
+.team__item:hover:after {
+	opacity: 1
+}
+
+.team__item:hover .team__text {
+	top: 0
+}
+
+.team__item:hover .team__text .team__title {
+	border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+	padding: 0 0 26px;
+	margin-bottom: 26px;
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	bottom: initial;
+	opacity: 1;
+	visibility: visible
+}
+
+.team__item:hover .team__text p {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all .5s ease .3s;
+	-o-transition: all .5s ease .3s;
+	transition: all .5s ease .3s
+}
+
+.team__item:hover .team__text .team__social {
+	opacity: 1;
+	visibility: visible;
+	bottom: 34px;
+	-webkit-transition: all .5s ease .5s;
+	-o-transition: all .5s ease .5s;
+	transition: all .5s ease .5s
+}
+
+.team__text {
+	height: 100%;
+	top: 361px;
+	position: relative;
+	padding: 35px 30px 30px;
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s
+}
+
+.team__text .team__title {
+	border-bottom: 1px solid rgba(183, 183, 183, 0.2);
+	padding: 0 0 26px;
+	margin-bottom: 26px;
+	position: relative
+}
+
+.team__text .team__title h4 {
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 6px
+}
+
+.team__text .team__title span {
+	font-size: 15px;
+	color: #88C417
+}
+
+.team__text p {
+	color: #e4e4e4;
+	line-height: 26px;
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	top: 50px;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s
+}
+
+.team__text .team__social {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 0 30px;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden
+}
+
+.team__text .team__social a {
+	display: inline-block;
+	font-size: 20px;
+	color: #fff;
+	margin-right: 34px;
+	-webkit-transition: all, .3s;
+	-o-transition: all, .3s;
+	transition: all, .3s
+}
+
+.team__text .team__social a:last-child {
+	margin-right: 0
+}
+
+.team__text .team__social a:hover {
+	color: #88C417
+}
+@media(max-width:768px) {
+  .team__item{height:350px}
+  .team__text{padding:25px 20px 20px}
+}
+.btncls {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btncls:hover {
+  background-color: RoyalBlue;
+}
+        }
+        html {
+  scroll-behavior: smooth;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+            
+
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static 'website/assets/img/logo/logo.png'%}" alt="Brand Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-10 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul style="float: right;">
+                                            
+                                            
+                                                {% if empname is none  %}
+                                                
+                                                {% else %}
+                                                <li><b><a>Welcome, {{empname | safe}}</a></b></li>
+                                                <li><a href="../../website/employeedashboard/{{empid}}">Dashboard</a></li>
+                                                {% endif %}
+                                            
+                                            <li><a href="../../website/">Home</a></li>
+                                            <li><a href="../../website/#team">Our Team</a></li>
+                                            {% if empname is not none  %}
+                                            <li><a href="{% url 'employeelogout' %}">Logout</a></li>
+                                            {% else %}
+
+                                            <li><a href="{% url 'loginemployee' %}">Employee Login</a></li>
+                                            
+                                            {% endif %}
+                                            <li><a  href="../../conversion/" style="padding-top: 24px;" target="_blank"><button class="btncls" style="background: #000000;
+                                                border-radius: 11px;"> TASK 2 </button></a></li>
+                                            
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start -->
+                        
+                        <!-- mini cart area end -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+
+        <!-- mobile header start -->
+     
+        <!-- mobile header end -->
+
+    </header>
+    <!-- end Header Area -->
+
+
+    <main>
+        <!-- hero slider area start -->
+        <section class="slider-area" id="home">
+            <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+                <!-- single slider item start -->
+                {% for item in slider %}
+                <div class="hero-single-slide hero-overlay">
+                    <div class="hero-slider-item bg-img" data-bg="../../administrator{{ item.slider_img.url }}">
+                        
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- single slider item start -->
+
+            </div>
+        </section>
+        <!-- hero slider area end -->
+        <section class="latest-blog-area section-padding" style="padding-top: 50px;" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- section title start -->
+                        <div class="section-title text-center">
+                            {% if dp_name is none  %}
+                                <h2 class="title">Our Team</h2>      
+                            {% else %}
+                                <h2 class="title">{{dp_name | safe}} - Our Team</h2>   
+                            {% endif %}
+                            
+                            
+                        </div>
+                        <!-- section title start -->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Single Starts  -->
+                    {% for emp in employee%}
+                      <div class="col-lg-4 col-md-6">
+                      <div class="team__item set-bg" style="background-image: url('../../administrator{{ emp.emp_img.url }}');">
+                        <div class="team__text">
+                          <div class="team__title">
+                            <h4>{{emp.emp_name}}</h4>
+                            <span>{{emp.emp_designations}}</span>
+                          </div>
+                          <a class="btncls" href="{% url 'employeedetail' emp.id %}"><i class="fa fa-eye"></i>View Profile</a>
+                          <div class="team__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                    
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- footer area start -->
+    <footer class="footer-widget-area">
+       
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-text text-center">
+                            <p>Powered By <a href="#">ABC GROUP</a>. © 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+ 
+
+   
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="{% static 'website/assets/js/vendor/modernizr-3.6.0.min.js '%}"></script>
+    <!-- jQuery JS -->
+    <script src="{% static 'website/assets/js/vendor/jquery-3.3.1.min.js '%}"></script>
+    <!-- Popper JS -->
+    <script src="{% static 'website/assets/js/vendor/popper.min.js '%}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'website/assets/js/vendor/bootstrap.min.js '%}"></script>
+    <!-- slick Slider JS -->
+    <script src="{% static 'website/assets/js/plugins/slick.min.js '%}"></script>
+    <!-- Countdown JS -->
+    <script src="{% static 'website/assets/js/plugins/countdown.min.js '%}"></script>
+    <!-- Nice Select JS -->
+    <script src="{% static 'website/assets/js/plugins/nice-select.min.js'%}"></script>
+    <!-- jquery UI JS -->
+    <script src="{% static 'website/assets/js/plugins/jqueryui.min.js'%}"></script>
+    <!-- Image zoom JS -->
+    <script src="{% static 'website/assets/js/plugins/image-zoom.min.js'%}"></script>
+    <!-- Imagesloaded JS -->
+    <script src="{% static 'website/assets/js/plugins/imagesloaded.pkgd.min.js'%}"></script>
+    <!-- Instagram feed JS -->
+    <script src="{% static 'website/assets/js/plugins/instagramfeed.min.js'%}"></script>
+    <!-- mailchimp active js -->
+    <script src="{% static 'website/assets/js/plugins/ajaxchimp.js'%}"></script>
+    <!-- contact form dynamic js -->
+    <script src="{% static 'website/assets/js/plugins/ajax-mail.js'%}"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+    <!-- google map active js -->
+    <script src="{% static 'website/assets/js/plugins/google-map.js'%}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'website/assets/js/main.js'%}"></script>
+</body>
+
+
+</html>
